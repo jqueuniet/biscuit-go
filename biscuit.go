@@ -5,19 +5,15 @@ package biscuit
 
 import (
 	"bytes"
+	"crypto/ed25519"
 	"crypto/rand"
 	"encoding/binary"
-
-	//"crypto/sha256"
-	"crypto/ed25519"
 	"errors"
 	"fmt"
 	"io"
 
 	"github.com/eclipse-biscuit/biscuit-go/v2/datalog"
 	"github.com/eclipse-biscuit/biscuit-go/v2/pb"
-
-	//"github.com/eclipse-biscuit/biscuit-go/sig"
 	"google.golang.org/protobuf/proto"
 )
 
