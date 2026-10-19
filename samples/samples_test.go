@@ -183,7 +183,7 @@ func CompareBlocks(token biscuit.Biscuit, blocks []Block, t *testing.T) {
 	require.Equal(t, sample, rebuilt.Code())
 }
 
-func CompareResult(root_key ed25519.PublicKey, filename string, token biscuit.Biscuit, v Validation, t *testing.T) {
+func CompareResult(root_key ed25519.PublicKey, _ string, token biscuit.Biscuit, v Validation, t *testing.T) {
 	p := parser.New()
 	authorizer_code, err := p.Authorizer(v.AuthorizerCode, nil)
 	require.NoError(t, err)

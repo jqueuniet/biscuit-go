@@ -78,7 +78,7 @@ func Authorize(token *biscuit.Biscuit, root *ed25519.PublicKey) error {
 	return authorizer.Authorize()
 }
 
-func Attenuate(serializedToken []byte, root *ed25519.PublicKey) ([]byte, error) {
+func Attenuate(serializedToken []byte, _ *ed25519.PublicKey) ([]byte, error) {
 	token, err := biscuit.Unmarshal(serializedToken)
 	if err != nil {
 		return nil, fmt.Errorf("failed to deserialize biscuit: %v", err)

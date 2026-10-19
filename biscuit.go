@@ -232,7 +232,7 @@ func (b *Biscuit) Append(rng io.Reader, block *Block) (*Biscuit, error) {
 	}, nil
 }
 
-func (b *Biscuit) Seal(rng io.Reader) (*Biscuit, error) {
+func (b *Biscuit) Seal(_ io.Reader) (*Biscuit, error) {
 	if b.container == nil {
 		return nil, errors.New("biscuit: token is already sealed")
 	}
